@@ -9,12 +9,16 @@
           <context context-type="linenumber">11,13</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8129575432049856191" datatype="html">
-        <source>Welcome to the angular core deep dive course</source>
+      <trans-unit id="welcomeMessage" datatype="html">
+        <source> Welcome to the angular core deep dive course
+</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">15,18</context>
+          <context context-type="linenumber">27,33</context>
         </context-group>
+        <note priority="1" from="description"> Greet the user a greeting at the beginning of the
+    course</note>
+        <note priority="1" from="meaning">Welcome message </note>
       </trans-unit>
     </body>
   </file>

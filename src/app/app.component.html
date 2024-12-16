@@ -13,7 +13,19 @@
 <!-- aggiungo un'altra stringa da internazionalizzare, quindi sempre con attributo i18n -->
 <!-- per averla nel file messages.xlf devo rieseguire il comando per l'estrazione ng extract-i18n -->
 <!-- le stringhe nel file sono contraddistinte da un id univoco, se cambio la stringa qui devo rirunnare il comando di estrazione e se la stringa è cambiata verrà generato un nuovo id -->
-<h4 i18n>Welcome to the angular core deep dive course</h4>
+<!-- nell'attributo i18n possiamo passare alcune informazioni relative alla stringa, ad esempio un meaning ed una description, separandole con il pipe -->
+<!-- ad esempio questa stringa è un messaggio di benvenuto, saluto lo user con un saluto relativo al corso  -->
+<!-- queste info le ritrovo nel file messages.xlf -->
+<!-- lo unique id viene rigenerato solo se cambio il contenuto della stringa o il meaning, non se cambio la description -->
+<!-- posso generare manulamente un id, aggiungendo alla fine delle info passate all'attributo @@welcomeMessage -->
+<!-- in questo modo l'id della stringa nel file messages.xlf sarà welcomeMessage -->
+<h4
+  i18n="
+    Welcome message | Greet the user a greeting at the beginning of the
+    course@@welcomeMessage"
+>
+  Welcome to the angular core deep dive course
+</h4>
 
 <div>
   <h1>Corsi tramite variabile coursesDaFile ed alias courses</h1>
