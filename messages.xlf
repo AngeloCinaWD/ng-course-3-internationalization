@@ -14,11 +14,28 @@
 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">27,33</context>
+          <context context-type="linenumber">27,31</context>
         </context-group>
         <note priority="1" from="description"> Greet the user a greeting at the beginning of the
     course</note>
         <note priority="1" from="meaning">Welcome message </note>
+      </trans-unit>
+      <trans-unit id="2380939390102386148" datatype="html">
+        <source> <x id="ICU" equiv-text="{ coursesTotal, plural, =0 {No courses available.} =1 {One course is
+  available.} other {A total of {{ coursesTotal }} courses are available} }"/>
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">33,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5315213994462587123" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {No courses available.} =1 {One course is
+  available.} other {A total of <x id="INTERPOLATION"/> courses are available}}</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">33,38</context>
+        </context-group>
       </trans-unit>
     </body>
   </file>

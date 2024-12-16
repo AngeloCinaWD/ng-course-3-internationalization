@@ -91,6 +91,9 @@ export class AppComponent implements OnInit {
 
   coursesDaFile: Course[] = COURSES;
 
+  // proprietà con il numero dei corsi disponibili, la utilizzo nel template per mostrare un messaggio diverso in base al numero dei corsi disponibili e per utilizzare il Pluralization Support per l'internazionalizzazione multipla
+  coursesTotal = this.coursesDaFile.length;
+
   // i corsi non li prendo più direttamente dal file db-data, ma li definerò tramite chiamata get http
   // courses = COURSES;
   courses: Course[];

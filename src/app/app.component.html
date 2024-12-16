@@ -27,6 +27,13 @@
   Welcome to the angular core deep dive course
 </h4>
 
+<!-- utilizzo la proprietà coursesTotal per creare una pluralizzazione a seconda del messaggio da mostrare -->
+<!-- rirunnando il comando ng extract-i18n avrò un id per tutto lo statement coi vari casi-->
+<div i18n>
+  { coursesTotal, plural, =0 {No courses available.} =1 {One course is
+  available.} other {A total of {{ coursesTotal }} courses are available} }
+</div>
+
 <div>
   <h1>Corsi tramite variabile coursesDaFile ed alias courses</h1>
   <div class="courses" *ngIf="coursesDaFile as courses">
