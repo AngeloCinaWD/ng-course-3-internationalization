@@ -29,6 +29,7 @@
 
 <!-- utilizzo la proprietà coursesTotal per creare una pluralizzazione a seconda del messaggio da mostrare -->
 <!-- rirunnando il comando ng extract-i18n avrò un id per tutto lo statement coi vari casi-->
+<!-- questo caso è applicabile ad esempio in cui l'if statement dipende da un valore numerico -->
 <div i18n>
   { coursesTotal, plural, =0 {No courses available.} =1 {One course is
   available.} other {A total of {{ coursesTotal }} courses are available} }
@@ -41,9 +42,17 @@
     <!-- creo un file chiamato filter-by-category.pipe.ts in courses -->
     <!-- il pipe filterByCategory viene applicato direttamente al ciclo for e gli viene passato il nome della category che voglio visualizzare -->
     <!-- il pipe restituisce un array di corsi contenenti solo quelli con la categoria beginner (la categoria la posso cambiare) e il titolo del corso in uppercase -->
-    <course-card
+    <!-- <course-card
       [highlighted]
       *ngFor="let course of courses | filterByCategory : 'BEGINNER'"
+      [course]="course"
+      (courseChanged)="onCourseChanged($event)"
+    >
+      <course-image [src]="course.iconUrl"></course-image>
+    </course-card> -->
+    <course-card
+      [highlighted]
+      *ngFor="let course of courses"
       [course]="course"
       (courseChanged)="onCourseChanged($event)"
     >

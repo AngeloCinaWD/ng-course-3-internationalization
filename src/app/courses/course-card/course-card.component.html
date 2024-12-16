@@ -10,12 +10,20 @@
     Edit Title: <input #courseTitle [value]="course.description" />
   </div>
 
+  <!-- in caso in cui l'if-statement dipende da una stringa -->
+  <!-- potrei internazionalizzare andando ad aggiungere l'attributo i18n ad ogni swithcase -->
   <div class="course-category" [ngSwitch]="course.category">
-    <div class="category" *ngSwitchCase="'BEGINNER'">Beginner</div>
+    <!-- <div class="category" *ngSwitchCase="'BEGINNER'" i18n>Beginner</div>
 
-    <div class="category" *ngSwitchCase="'INTERMEDIATE'">Intermediate</div>
+    <div class="category" *ngSwitchCase="'INTERMEDIATE'" i18n>Intermediate</div>
 
-    <div class="category" *ngSwitchCase="'ADVANCED'">Advanced</div>
+    <div class="category" *ngSwitchCase="'ADVANCED'" i18n>Advanced</div> -->
+
+    <!-- oppure riscrivo tutto così, utilizzando la keyword select -->
+    <div class="category" i18n>
+      { course.category, select, BEGINNER {Beginner} INTERMEDIATE {Intermediate}
+      ADVANCED {Advanced} }
+    </div>
   </div>
 
   <!-- al click del button viene chiamato il metodo onSaveClicked e gli viene passato il valore presente nell'input -->
