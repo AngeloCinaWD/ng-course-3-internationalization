@@ -5,7 +5,15 @@
   />
 </div>
 
-<button (click)="editCategory()">Edit category</button>
+<!-- per indicare che una determinata stringa deve essere tradotta utilizzo l'attributo i18n -->
+<!-- internalizzation -->
+<!-- devo runnare il comando cli ng extract-i18n, mi creerà un file messages.xlf nella root dell'app -->
+<button (click)="editCategory()" i18n>Edit category</button>
+
+<!-- aggiungo un'altra stringa da internazionalizzare, quindi sempre con attributo i18n -->
+<!-- per averla nel file messages.xlf devo rieseguire il comando per l'estrazione ng extract-i18n -->
+<!-- le stringhe nel file sono contraddistinte da un id univoco, se cambio la stringa qui devo rirunnare il comando di estrazione e se la stringa è cambiata verrà generato un nuovo id -->
+<h4 i18n>Welcome to the angular core deep dive course</h4>
 
 <div>
   <h1>Corsi tramite variabile coursesDaFile ed alias courses</h1>

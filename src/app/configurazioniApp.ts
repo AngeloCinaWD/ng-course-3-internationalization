@@ -10,7 +10,7 @@ export interface AppConfig {
 
 // definisco l'oggetto con i valori
 export const APP_CONFIG: AppConfig = {
-  apiUrl: "http://localhost:9000",
+  apiUrl: "http://localhost:9200",
   courseCacheSize: 50,
 };
 
